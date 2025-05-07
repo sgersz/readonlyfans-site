@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: sgersz/sgersz.github.io
+  name: git-gateway
   branch: main
 
 media_folder: "images/uploads"
