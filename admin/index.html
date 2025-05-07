@@ -17,9 +17,16 @@
           }
         });
       }
-
+    </script>
+    <script>
       window.CMS_MANUAL_INIT = true;
-      CMS.init();
+      window.addEventListener('load', function () {
+        if (window.CMS) {
+          window.CMS.init();
+        } else {
+          console.error('CMS not loaded');
+        }
+      });
     </script>
   </body>
 </html>
