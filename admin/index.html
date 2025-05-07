@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script src="https://unpkg.com/netlify-cms/dist/netlify-cms.js"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
+    <div id="nc-root"></div>
+
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
@@ -18,8 +20,8 @@
         });
       }
     </script>
+
     <script>
-      window.CMS_MANUAL_INIT = true;
       window.addEventListener('load', function () {
         if (window.CMS) {
           window.CMS.init();
